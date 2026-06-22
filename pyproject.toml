@@ -1,0 +1,20 @@
+[project]
+name = "social-intel-backend"
+version = "0.1.0"
+description = "Backend for social intelligence project"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlmodel",
+    "pydantic",
+    "pydantic-settings",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+filterwarnings = [
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated"
+]
